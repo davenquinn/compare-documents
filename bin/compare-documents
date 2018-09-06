@@ -35,6 +35,10 @@ set -- "${positional[@]}" # restore positional parameters
 base="$(readlink -f "$1")"
 changed="$(readlink -f "$2")"
 
+admonish="file not specified or nonexistant"
+[ ! -f "$base" ] && echo "Base $admonish" && exit 1
+[ ! -f "$changed" ] && echo "Change $admonish" && exit 1
+
 osascript "$dn/../script/compare-documents.scpt" \
   "$base" "$changed" "$outfile" \
   "$author" "$name" $keep_open
