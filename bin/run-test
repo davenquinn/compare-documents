@@ -2,5 +2,7 @@
 
 dn="$(dirname "$(readlink -f "$0")")"
 pushd "$dn/.." &> /dev/null
-bin/compare-documents "test/genesis1_kingjames.docx" "test/genesis1_newinternational.docx"
+bin/compare-documents -o "test/output.docx" \
+  "test/genesis1_kingjames.docx" \
+  "test/genesis1_newinternational.docx"
 popd &> /dev/null
