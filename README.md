@@ -1,11 +1,11 @@
 # compare-documents
 
 `compare-documents` is a command-line application that runs the "Compare" tool
-in Microsoft Word against two documents specified at the command line. This is
-envisioned to transparently support diffs of Word documents using the
-excellent track changes tool, while simplifying this fairly clunky
-interaction. It should speed up and automate academic publishing workflows
-based around `pandoc` and the universe of plain-text writing tools.
+in Microsoft Word against two documents. This should support user-friendly
+diffs of Word documents using the
+excellent track changes tool, while abstracting a fairly clunky
+GUI interaction. My purpose in creating this tool is to speed up the generation
+of copies of `pandoc`-generated text for collaboration with Microsoft Word users.
 
 The CLI currently works only on Mac OS, using AppleScript automation. However,
 I would be interested in pull requests integrating an alternative (likely
