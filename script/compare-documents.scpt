@@ -13,8 +13,9 @@ on run argv
     close doc
     set newDoc to (get active document)
     if not outFile equals "\\0" then
-      log (POSIX file outFile)
-      save as newDoc file name outFile
+      set fname to (POSIX file outFile as text)
+      log fname
+      save as newDoc file name (POSIX file outFile)
     end if
   end tell
 end run
