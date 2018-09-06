@@ -4,8 +4,12 @@
 in Microsoft Word against two documents. This should support user-friendly
 diffs of Word documents using the
 excellent track changes tool, while abstracting a fairly clunky
-GUI interaction. My purpose in creating this tool is to speed up the generation
-of copies of `pandoc`-generated text for collaboration with Microsoft Word users.
+GUI interaction.
+
+My purpose in creating this tool is to speed up the generation of changesets
+from versioned plaintext (e.g. `git` revisions of scholarly markdown, processed
+with `pandoc`) that are digestible to Microsoft Word users.
+
 
 The CLI currently works only on Mac OS, using AppleScript automation. However,
 I would be interested in pull requests integrating an alternative (likely
