@@ -9,3 +9,19 @@ around `pandoc` and the universe of plain-text writing tools.
 The CLI currently works only on Mac OS, using AppleScript automation. However, I would
 be interested in pull requests integrating an alternative (likely COM-based) backend for Windows,
 wrapped in the same API.
+
+## Usage
+
+```bash
+compare-documents [OPTIONS...] base_doc changed_doc
+
+OPTIONS
+  --output/-o      Output merged file (if not specified, file is
+                   left open in GUI.
+  --keep-open/-k   If output file is written, keep it open
+  --author/-a      Author for revisions (defaults to configured
+                   value for Microsoft Word).
+
+  base_doc         Path to base document for comparison
+  changed_doc      Path to document with changes
+```

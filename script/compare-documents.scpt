@@ -24,9 +24,9 @@ on run argv
       set fname to (POSIX file outFile as text)
       log fname
       save as newDoc file name (POSIX file outFile)
-      --if not keepOpen equals 1 then
-        --close newDoc
-      --end if
+      if not keepOpen equals "1" then
+        close newDoc
+      end if
     end if
   end tell
 end run
