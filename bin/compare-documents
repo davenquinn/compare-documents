@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+dn="$(dirname "$(readlink -f "$0")")"
+osascript "$dn/../script/compare-documents.scpt" $@
