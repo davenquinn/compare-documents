@@ -2,7 +2,9 @@
 
 dn="$(dirname "$(readlink -f "$0")")"
 pushd "$dn/.." &> /dev/null
-bin/compare-documents -o test-data/output.docx \
+bin/compare-documents --keep-open \
+  --author "Biblica" \
+  -o test-data/output.docx \
   test-data/genesis1_kingjames.docx \
   test-data/genesis1_newinternational.docx
 popd &> /dev/null
